@@ -109,15 +109,15 @@ class AbstractChart<
     };
   }
 
-  getPropsForVerticalLabels() {
+  getPropsForVerticalLabels(label: string, index: number) {
     const {
-      propsForVerticalLabels = {},
+      propsForVerticalLabels = () => {},
       color,
       labelColor = color
     } = this.props.chartConfig;
     return {
       fill: labelColor(0.8),
-      ...propsForVerticalLabels
+      ...(propsForVerticalLabels(label, index))
     };
   }
 
@@ -303,7 +303,7 @@ class AbstractChart<
           y={y}
           textAnchor={verticalLabelRotation === 0 ? "middle" : "start"}
           {...this.getPropsForLabels()}
-          {...this.getPropsForVerticalLabels()}
+          {...this.getPropsForVerticalLabels(label, i)}
         >
           {`${formatXLabel(label)}${xAxisLabel}`}
         </Text>
