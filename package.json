@@ -38,9 +38,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "test": "jest",
-    "build": "tsc --skipLibCheck --noEmit",
+    "build": "tsc --skipLibCheck",
     "dev": "tsc --watch",
-    "prepublish": "npm run build",
     "prepare": "npm run build"
   },
   "jest": {
