@@ -40,8 +40,8 @@
     "test": "jest",
     "build": "tsc",
     "dev": "tsc --watch",
-    "prepublish": "yarn build",
-    "prepare": "yarn build"
+    "prepublish": "npm build",
+    "prepare": "npm build"
   },
   "jest": {
     "preset": "jest-expo"
