@@ -115,12 +115,12 @@ export interface ChartConfig {
   /**
    * Override styles of vertical labels, refer to react-native-svg's Text documentation
    */
-  propsForVerticalLabels?: TextProps;
+  propsForVerticalLabels?: (label: string, index: number) => TextProps;
 
   /**
    * Override styles of horizontal labels, refer to react-native-svg's Text documentation
    */
-  propsForHorizontalLabels?: (label: string, index: number) => TextProps;
+  propsForHorizontalLabels?: TextProps;
   /**
    * Override styles of the dots, refer to react-native-svg's Text documentation
    */

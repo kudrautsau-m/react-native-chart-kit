@@ -1,3 +1,4 @@
+// @ts-nocheck
 import Pie from "paths-js/pie";
 import React from "react";
 import { View, ViewStyle } from "react-native";

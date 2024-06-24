@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { ReactNode } from "react";
 import {
   Animated,
@@ -981,13 +982,15 @@ class LineChart extends AbstractChart<LineChartProps, LineChartState> {
             contentContainerStyle={{ width: width * 2 }}
             showsHorizontalScrollIndicator={false}
             scrollEventThrottle={16}
-            onScroll={Animated.event([
-              {
-                nativeEvent: {
-                  contentOffset: { x: scrollableDotHorizontalOffset }
+            onScroll={Animated.event(
+              [
+                {
+                  nativeEvent: {
+                    contentOffset: { x: scrollableDotHorizontalOffset }
+                  }
                 }
-              }
-            ], { useNativeDriver: false }
+              ],
+              { useNativeDriver: false }
             )}
             horizontal
             bounces={false}

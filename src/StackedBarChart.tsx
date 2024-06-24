@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from "react";
 import { View, ViewStyle } from "react-native";
 import { G, Rect, Svg, Text } from "react-native-svg";

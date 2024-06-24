@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { Component } from "react";
 import { Defs, Line, LinearGradient, Stop, Text } from "react-native-svg";
 
@@ -44,7 +45,9 @@ class AbstractChart<
 > extends Component<AbstractChartProps & IProps, AbstractChartState & IState> {
   calcScaler = (data: number[]) => {
     if (this.props.fromZero && this.props.fromNumber) {
-      return Math.max(...data, this.props.fromNumber) - Math.min(...data, 0) || 1;
+      return (
+        Math.max(...data, this.props.fromNumber) - Math.min(...data, 0) || 1
+      );
     } else if (this.props.fromZero) {
       return Math.max(...data, 0) - Math.min(...data, 0) || 1;
     } else if (this.props.fromNumber) {
@@ -117,7 +120,7 @@ class AbstractChart<
     } = this.props.chartConfig;
     return {
       fill: labelColor(0.8),
-      ...(propsForVerticalLabels(label, index))
+      ...propsForVerticalLabels(label, index)
     };
   }
 

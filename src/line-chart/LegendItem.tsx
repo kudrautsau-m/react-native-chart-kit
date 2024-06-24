@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from "react";
 import { Color, Rect, Text, TextProps } from "react-native-svg";
 

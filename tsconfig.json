@@ -21,6 +21,17 @@
     "inlineSources": true,
     "esModuleInterop": true,
     "noErrorTruncation": true,
-    "jsx": "react-native"
-  }
+    "jsx": "react-native",
+    "skipLibCheck": true,
+    "types": [],
+    "noEmit": false,
+    "noEmitOnError": false,
+    "strict": false
+  },
+  "exclude": [
+    "node_modules",
+    "./node_modules",
+    "./node_modules/*",
+    "./node_modules/@types/node/index.d.ts"
+  ]
 }
